@@ -3,13 +3,22 @@ import Card from "./Card.jsx";
 
 function Grid({ data }) {
   if (data) {
+    function handleClick() {
+      setRandomIndexes(getRandomIndexes(data.length));
+    }
     const [randomIndexes, setRandomIndexes] = useState(
       getRandomIndexes(data.length),
     );
     const shuffledArr = randomIndexes.map((i) => data[i]);
     let cards = shuffledArr.map((elem) => {
       return (
-        <Card key={elem.id} id={elem.id} name={elem.name} img={elem.img} />
+        <Card
+          key={elem.id}
+          id={elem.id}
+          name={elem.name}
+          img={elem.img}
+          onClick={handleClick}
+        />
       );
     });
 
