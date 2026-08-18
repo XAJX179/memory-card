@@ -59,7 +59,6 @@ function Grid({
 }
 
 function getRandomIndexes(max) {
-  console.time("random");
   const indexes = [];
   while (indexes.length < max) {
     let index = getRandomInt(max);
@@ -67,7 +66,6 @@ function getRandomIndexes(max) {
       indexes.push(index);
     }
   }
-  console.timeEnd("random");
   return indexes;
 }
 
