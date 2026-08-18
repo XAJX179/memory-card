@@ -1,9 +1,8 @@
 function Card({ id, name, img }) {
   return (
     <div className="card">
-      <p>{id}</p>
+      <img src={img}></img>
       <p>{name}</p>
-      <p>{img}</p>
     </div>
   );
 }

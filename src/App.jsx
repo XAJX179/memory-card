@@ -6,11 +6,13 @@ import { getPokemons } from "./pokemon.js";
 function App() {
   const pokemons = useAPI(getPokemons);
 
-  return (
-    <main>
-      <Grid data={pokemons} />
-    </main>
-  );
+  if (pokemons) {
+    return (
+      <main>
+        <Grid data={pokemons} />
+      </main>
+    );
+  }
 }
 
 function useAPI(apiCall) {
