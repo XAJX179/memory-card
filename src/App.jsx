@@ -21,6 +21,12 @@ function App() {
           <span> Now: {currGuessNo} </span>
         </header>
         <Dialog showDialog={showDialog} setShowDialog={setShowDialog} />
+        <dialog open closedby="any">
+          <p>Don't click on a pokemon twice to win.</p>
+          <form method="dialog">
+            <button>Start</button>
+          </form>
+        </dialog>
         <Grid
           data={pokemons}
           bestGuessNo={bestGuessNo}
